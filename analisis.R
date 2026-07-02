@@ -17,6 +17,9 @@
 # Cargar datos: relacion entre peso del auto (wt) y rendimiento (mpg)
 datos <- mtcars
 
+# Colores de acuerdo al número de cilindros
+colores <- c("blue", "darkorange", "green")[as.factor(datos$cyl)]
+
 # Grafico de dispersion basico
 png("grafico_peso_vs_rendimiento.png")
 plot(
@@ -25,7 +28,19 @@ plot(
   xlab = "Peso (1000 lbs)",
   ylab = "Millas por galon (mpg)",
   pch = 15,
-  col = "orange"
+  col = colores
+)
+
+modelo  <- lm(mpg ~, data = datos)
+abline(modelo, lwd=2, lty=2)
+
+# Leyenda
+legend(
+  "topright",
+  legend = c("4 cilindros", "6 cilindros", "8 cilindros"),
+  col = c("steelblue", "darkorange", "firebrick"),
+  pch = 19,
+  bty = "n"
 )
 
 # Guardar el grafico como imagen (queda versionado junto al script)
