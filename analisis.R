@@ -31,7 +31,7 @@ plot(
   col = colores
 )
 
-modelo  <- lm(mpg ~, data = datos)
+modelo  <- lm(mpg ~ wt, data = datos)
 abline(modelo, lwd=2, lty=2)
 
 # Leyenda
