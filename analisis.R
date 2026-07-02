@@ -24,8 +24,8 @@ plot(
   main = "Relacion entre peso y rendimiento de combustible",
   xlab = "Peso (1000 lbs)",
   ylab = "Millas por galon (mpg)",
-  pch = 19,
   col = "steelblue"
+  pch = 15,
 )
 
 # Guardar el grafico como imagen (queda versionado junto al script)
