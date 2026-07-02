@@ -13,3 +13,21 @@
 #   3. Commitear el cambio y mostrar el diff en GitHub
 #
 # ------------------------------------------------------------
+
+# Cargar datos: relacion entre peso del auto (wt) y rendimiento (mpg)
+datos <- mtcars
+
+# Grafico de dispersion basico
+# png("grafico_peso_vs_rendimiento.png")
+plot(
+  datos$wt, datos$mpg,
+  main = "Relacion entre peso y rendimiento de combustible",
+  xlab = "Peso (1000 lbs)",
+  ylab = "Millas por galon (mpg)",
+  pch = 19,
+  col = "steelblue"
+)
+
+# Guardar el grafico como imagen (queda versionado junto al script)
+# dev.copy(png, "grafico_peso_vs_rendimiento.png")
+# dev.off()
