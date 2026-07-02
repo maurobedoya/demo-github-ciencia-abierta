@@ -18,7 +18,7 @@
 datos <- mtcars
 
 # Grafico de dispersion basico
-# png("grafico_peso_vs_rendimiento.png")
+png("grafico_peso_vs_rendimiento.png")
 plot(
   datos$wt, datos$mpg,
   main = "Relacion entre peso y rendimiento de combustible",
