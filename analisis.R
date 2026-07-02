@@ -29,5 +29,5 @@ plot(
 )
 
 # Guardar el grafico como imagen (queda versionado junto al script)
-# dev.copy(png, "grafico_peso_vs_rendimiento.png")
-# dev.off()
+#dev.copy(png, "grafico_peso_vs_rendimiento.png")
+dev.off()
